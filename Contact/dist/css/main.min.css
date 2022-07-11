@@ -137,12 +137,9 @@ table thead th {
   padding: 1rem 0;
 }
 
-table tbody {
-  border-top: 2px solid #D0D0D0;
-}
-
 table tbody td {
   padding: 1.25rem 0;
+  border-top: 2px solid #D0D0D0;
 }
 
 table tr {

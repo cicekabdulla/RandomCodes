@@ -5,8 +5,8 @@ const callElem = selector => document.querySelector(selector),
     surnameInput = callElem('.surnameInput'),
     emailInput = callElem('.emailInput'),
     form = callElem('form'),
+    tr = callElem('tr'),
     tbody = callElem('tbody'),
-    table = callElem('table'),
     contactMessage = callElem('.contact__message');
 
 
@@ -65,10 +65,10 @@ form.addEventListener('submit', (e) => {
         statusMessage('error', 'Required failed');
         return;
     }
-    const tbody = document.createElement('tbody');
+    const tr = document.createElement('tr');
 
-    tbody.innerHTML = `
-    <tr>
+    tr.innerHTML = `
+    
     <td>${newPerson.name}</td>
     <td>${newPerson.surname}</td>
     <td>${newPerson.email}</td>
@@ -78,9 +78,8 @@ form.addEventListener('submit', (e) => {
         <button class="btn_modify"><i
                 class="fa-solid
                 fa-pen-to-square"></i></button></td>
-    </tr>
       `
-    table.appendChild(tbody);
+    tbody.appendChild(tr);
     statusMessage('success', 'Successfully!');
 
     nameInput.value = '';
