@@ -101,4 +101,26 @@ html {
 #login ul li a:hover {
   text-decoration: underline;
 }
+
+.error {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 1.4rem;
+  background-color: #ff7a7a;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.success {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 1.4rem;
+  background-color: #4bff69;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+}
 /*# sourceMappingURL=main.min.css.map */

@@ -1,4 +1,4 @@
-#footer {
+footer {
   background-color: #f7f7f7;
   border-top: 1px solid #e1e1e1;
   padding: 3rem 0rem;
@@ -131,9 +131,9 @@
     font-size: 3rem;
     color: $yellow-color;
     cursor: pointer;
-    transition: all .2s linear;
-    &:hover{
-        color:black;
+    transition: all 0.2s linear;
+    &:hover {
+      color: black;
     }
   }
 }
