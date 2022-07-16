@@ -1,32 +1,47 @@
 'use strict';
 
-const addToCart = document.querySelectorAll('.add__cart'),
-    img = document.querySelector('img'),
-    cardName = document.querySelector('.card__name').textContent,
-    span = document.querySelector('span').innerText
+// 1ci variant
+// const addToCart = document.querySelectorAll('.add__cart');
 
+// addToCart.forEach(item => {
+//     item.addEventListener('click', e => {
+//         e.preventDefault();
 
-const newProduct = {
-    image: img,
-    name: cardName,
-    price: span
-}
+//         const target = e.target.parentElement.parentElement;
+//         const img = target.children[0].getAttribute('src');
+//         const cardName = target.parentElement.children[1].textContent;
+//         const price = target.parentElement.children[2].textContent;
 
-for (let i = 0; i < addToCart.length; i++) {
-    addToCart[i].addEventListener('click', () => {
-   setLS(newProduct);
+//         const newProduct = {
+//             img: img,
+//             name: cardName,
+//             price: price
+//         }
 
-        toTable(newProduct);
-    })
-}
-// addToCart.forEach(btn => {
-//     btn.addEventListener('click', (e) => {
-//         console.log(e.target);
-//         console.log(cardName);
-
-     
+//         setLS(newProduct);
 //     })
 // })
+
+// 2ci variant
+const addToCart = document.querySelectorAll('.add__cart'),
+    cardItem = document.querySelectorAll('.card__item'),
+    img = document.querySelectorAll('img'),
+    cardName = document.querySelectorAll('.card__name'),
+    span = document.querySelectorAll('span');
+
+for (let i = 0; i < addToCart.length; i++) {
+    addToCart[i].addEventListener('click', e => {
+        e.preventDefault();
+
+        const newProduct = {
+            img: img[i].getAttribute('src'),
+            name: cardName[i].textContent,
+            price: span[i].textContent
+        }
+
+        setLS(newProduct);
+    })
+}
 
 
 function getLS() {

@@ -18,7 +18,7 @@ function toTable(value) {
     tr.innerHTML = `
     <td>
     <div>
-        <img src="src/resources/img/1.jpg" alt="">
+        <img src=${value.img} alt="">
         <h4>${value.name}</h4>
     </div>
     </td>
