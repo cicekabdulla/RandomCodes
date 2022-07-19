@@ -40,6 +40,8 @@ for (let i = 0; i < addToCart.length; i++) {
         }
 
         setLS(newProduct);
+
+        statusMessage(newProduct.name);
     })
 }
 
@@ -62,3 +64,17 @@ function setLS(value) {
 
     localStorage.setItem('products', JSON.stringify(data));
 }
+
+function statusMessage(title) {
+    document.querySelector('.status__message').style.display = 'block';
+    document.querySelector('.status__message').style.border = '2px dashed lightgray';
+    document.querySelector('.status__message h1').style.display = 'block';
+    document.querySelector('.status__message h1 span').textContent = title;
+    document.querySelector('.status__message a').textContent = 'View Cart';
+    document.querySelector('.status__message a').style.width = '120px';
+
+    setTimeout(() => {
+        document.querySelector('.status__message').style.display = 'none!important';
+    }, 3000)
+}
+
