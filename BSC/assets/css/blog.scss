@@ -1,0 +1,80 @@
+@import "default";
+@import "headfoot";
+
+#Xeber_Blog {
+    @extend %H1;
+    h1 {
+        font-size: 70px;
+        margin-bottom: 16px;
+    }
+    .Se_in {
+        margin: 32px 20px 0 0px !important;
+        border: 2px solid #d6d6d6;
+        &:hover {
+            border: 2px solid #cda7f4;
+        }
+        a {
+            text-decoration: none;
+            h6 {
+                transition: all 0.2s linear;
+            }
+            &:hover {
+                h6 {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    .nav-item {
+        a {
+            background-color: white;
+            font-size: 20px;
+            color: $gray;
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+            border-radius: 0;
+            &.mar_l {
+                margin-left: 80px;
+            }
+            &.active {
+                color: $purple;
+                border-bottom: 2px solid $purple;
+            }
+        }
+    }
+    .owl-theme {
+        .owl-dots {
+            .owl-dot {
+                &:focus{
+                    outline: none;
+                }
+                &.active {
+                    span {
+                        width: 13px;
+                        height: 13px;
+                        background-color: $purple;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #Xeber_Blog {
+        .Se_in {
+            margin: 32px 0 0 0 !important;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #Xeber_Blog {
+        .nav-item {
+            .mar_l {
+                margin-left: 40px !important;
+            }
+        }
+    }
+}

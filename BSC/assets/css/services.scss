@@ -1,0 +1,204 @@
+@import "default";
+@import "headfoot";
+
+#Services {
+    @extend %H1;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    padding-bottom: 40px;
+    .services_nav {
+        margin-top: 40px;
+        
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        
+        span {
+            margin-left: 11px;
+            font-size: 15px;
+        }
+        img {
+            width: 24px;
+            color: white;
+        }
+        li {
+            margin: 12px 10px;
+            max-width: 300px;
+            a {
+                border-radius: 25px 5px;
+                color: $secgray;
+                border: 1px solid #d6d6d6;
+                &.active {
+                    color: white;
+                    background-color: rgba(29, 0, 66, 0.9);
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    height: 35px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 20px;
+        color: $darkpurple;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .tabs {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+        background-color: rgba(220, 194, 247, 0.1);
+        padding: 24px 24px 0 24px;
+    }
+
+    .tab {
+        width: 100%;
+        color: white;
+        overflow: hidden;
+        margin-bottom: 24px;
+        label {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            font-size: 18px;
+            font-weight: 500;
+            color: $darkpurple;
+            cursor: pointer;
+            margin-bottom: 0;
+            background-color: rgba(87, 87, 87, 0.05);
+            border-radius: 10px;
+            /* Icon */
+
+            &::after {
+                content: url("file:///C:/Users/PC/Desktop/BSC/assets/img/Plus.svg");
+                width: 1em;
+                height: 1em;
+                text-align: center;
+                transition: all 0.35s;
+            }
+        }
+        &-contentt {
+            max-height: 0;
+            padding: 0 1em;
+            color: $gray;
+            background: rgba(87, 87, 87, 0.05);
+            transition: all 0.35s;
+        }
+    }
+
+    // :checked
+    input:checked {
+        + .tab-label {
+            //   background-color: rgba(84,24,120,0.1);
+            border-radius: 10px 10px 0 0;
+            &::after {
+                content: url("file:///C:/Users/PC/Desktop/BSC/assets/img/Vector4.svg");
+            }
+        }
+        ~ .tab-contentt {
+            max-height: 100vh;
+            padding: 1em;
+            border-radius: 0 0 10px 10px;
+            line-height: 27px;
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 991px) {
+    #Services {
+        .nav-item {
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    #Services {
+        p {
+           font-size: 14px!important;
+        }
+    }
+    label {
+        font-size: 16px !important;
+    }
+    .tab-contentt {
+        font-size: 14px !important;
+    }
+}
+
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }

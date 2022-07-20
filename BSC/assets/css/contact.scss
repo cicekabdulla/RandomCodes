@@ -1,0 +1,176 @@
+@import "default";
+@import "headfoot";
+
+.fixed{
+    position: fixed;
+    bottom:0;
+    right:0;
+    
+}
+#Contact {
+    @extend %H1;
+    .contact_left {
+        color: $darkpurple;
+        img {
+            margin-right: 20px;
+        }
+        h4 {
+            max-width: 500px;
+            color: #1d0042;
+            line-height: 36px;
+            font-weight: 600;
+            margin-bottom: 96px;
+        }
+        .cont {
+            display: flex;
+            align-items: start;
+            margin-bottom: 40px;
+        }
+        .cont2 {
+            margin-bottom: 80px;
+        }
+    }
+
+    .contact_right {
+        form {
+            width: 80%;
+            background: #fafafa;
+            padding: 32px 38px;
+            border-radius: 10px;
+            .Text_input {
+                label {
+                    font-size: 18px;
+                    color: $darkpurple;
+                    font-weight: 400;
+                }
+                input {
+                    width: 100%;
+                    border: 1px solid #d1d1d1;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    height: 54px;
+                }
+                textarea {
+                    width: 100%;
+                    height: 112px;
+                    background: #ffffff;
+                    border: 1px solid #d1d1d1;
+                    border-radius: 10px;
+                }
+                input,
+                textarea {
+                    padding: 22px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $darkpurple;
+                    &:hover {
+                        border: 1px solid $darkpurple;
+                        cursor: pointer;
+                    }
+                    &:focus {
+                        border: 1px solid $darkpurple;
+                        outline: none;
+                    }
+                }
+            }
+            .Submit {
+                text-align: right;
+                margin-top: 22px;
+                input {
+                    background: #1d0042;
+                    border-radius: 10px;
+                    color: white;
+                    padding: 10px 48px;
+                    text-align: center;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+
+                    &:hover {
+                        color: $darkpurple;
+                        background-color: white;
+                        border-color: $darkpurple;
+                    }
+                }
+            }
+        }
+    }
+    .Text_input{
+        .form-group{
+            .invalid-feedback{
+                text-align: right;
+            }
+        }
+        .form-control{
+            &.is-invalid{
+                border-color:#dc3545!important;
+            }
+        }
+    }
+}
+
+#Contact_map {
+    img {
+        width: 100%;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #Contact {
+        form {
+            width: 90% !important;
+        }
+    }
+}
+@media (max-width: 991px) {
+    #Contact {
+        h4 {
+            font-size: 21px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    #Contact {
+        form {
+            width: 78%;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        h4{
+            margin-bottom: 60px!important;
+          
+        }
+
+    }
+}
+
+@media (max-width: 575px) {
+    #Contact {
+        form {
+            input {
+                font-size: 16px !important;
+            }
+            label {
+                font-size: 16px !important;
+            }
+        }
+        .Submit {
+            input {
+                padding: 8px 40px !important;
+            }
+        }
+        h4{
+          
+            font-size: 18px;
+        }
+        span{
+            font-size: 14px;
+            img{
+                margin-right: 10px!important;
+            }
+        }
+    }
+}

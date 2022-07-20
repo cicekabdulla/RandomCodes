@@ -1,0 +1,205 @@
+$gray: #868686;
+$lightgray: #e9e9e9;
+$secgray: #a7a7a7;
+$thgray: #5a5a5a;
+$purple: #541878;
+$darkpurple: #1d0042;
+$green: #296e73;
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+header {
+    font-family: "Work Sans", sans-serif;
+}
+.container {
+    max-width: 87rem;
+    margin: 0 auto;
+}
+
+%TwoUl {
+    margin-bottom: 0;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid $lightgray;
+    border-radius: 1.75rem;
+    li {
+        display: inline-block;
+        padding: 0.6rem 0.9rem;
+        position: relative;
+        a {
+            color: $gray;
+            transition: all 0.2s linear;
+            &.active {
+                color: $purple;
+            }
+        }
+        &:hover a {
+            color: $purple;
+            text-decoration: none;
+        }
+        &:not(:last-child):after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 1.5rem;
+            background-color: $lightgray;
+            right: -6px;
+            top: 12px;
+        }
+    }
+}
+%H1 {
+    h1 {
+        font-size: 96px;
+        color: #1d0042;
+        opacity: 0.07;
+        font-weight: 600;
+    }
+}
+.social {
+    ul {
+        display: flex;
+        padding-left: 0;
+    }
+    li {
+        list-style: none;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+    }
+}
+
+#Xeber_Blog,
+#Xeber_Info,
+#Xeber_Home {
+    padding-bottom: 30px;
+    .Se_in {
+        border: 2px solid #cda7f4;
+        border-radius: 25px 10px;
+        padding: 24px 24px 17px 24px;
+        h6 {
+            color: $purple;
+            font-weight: 600;
+            display: inline-block;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            height: 60px;
+        }
+        p {
+            font-size: 14px;
+            color: $secgray;
+            margin: 24px 0 24px 0;
+
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            height: 60px;
+        }
+        span {
+            color: $purple;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+    }
+    .Xeber {
+        text-align: right;
+        margin-top: 30px;
+        a {
+            color: $purple;
+        }
+        a {
+            position: relative;
+            text-decoration: none;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                background-color: $purple;
+                opacity: 1;
+                height: 1.5px;
+                transition: opacity 300ms, transform 300ms;
+                transform: scale(0);
+            }
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    transform: translate3d(0, 0.2em, 0);
+                    transform: scale(1);
+                }
+                text-decoration: none;
+
+            }
+        }
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #Services,
+    #Xeber_Blog,
+    #Contact {
+        h1 {
+            font-size: 56px !important;
+        }
+    }
+
+    #Diger_xeber,
+    #Xeber_Home,
+    #Xeber_Info {
+        .Se_in {
+            width: 75%;
+            margin: 20px auto;
+            h6 {
+                height: 20px;
+                -webkit-line-clamp: 1;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #First{
+        margin-top: 50px!important;
+        h4{
+            font-size: 20px;
+        }
+    }
+    #Xeber_Info{
+        h4{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #Diger_xeber,
+    #Xeber_Home,
+    #Xeber_Info {
+        .Se_in {
+            width: 95%;
+        }
+    }
+
+    #Services,
+    #Xeber_Blog,
+    #Contact {
+        h1 {
+            font-size: 40px !important;
+        }
+    }
+}

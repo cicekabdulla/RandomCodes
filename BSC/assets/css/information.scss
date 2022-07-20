@@ -1,0 +1,69 @@
+@import "default";
+@import "headfoot";
+
+#First {
+    margin-top: 80px;
+}
+h4 {
+    max-width: 480px;
+    color: $darkpurple;
+    line-height: 36px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+span {
+    &.Tarix {
+        color: $purple;
+        text-decoration: underline;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+
+p {
+    color: $thgray;
+    span {
+        color: $thgray;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+img {
+    width: 100%;
+}
+
+#Diger_xeber {
+    padding-top: 18px;
+    padding-bottom: 80px;
+}
+
+.Se_in {
+    a {
+        text-decoration: none;
+        h6 {
+            transition: all 0.2s linear;
+        }
+        &:hover {
+            h6 {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .rev_1 {
+        flex-direction: column-reverse;
+    }
+    .rev_2 {
+        flex-direction: column-reverse;
+    }
+
+    #Xeber_Info {
+        h4 {
+            margin-top: 30px;
+        }
+    }
+}
